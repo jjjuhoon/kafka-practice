@@ -1,4 +1,5 @@
-package com.practice.kafka_producer_practice.event;
+package com.practice.core;
+
 
 import java.math.BigDecimal;
 
@@ -51,5 +52,7 @@ public class ProductCreatedEvent {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+
 
 }

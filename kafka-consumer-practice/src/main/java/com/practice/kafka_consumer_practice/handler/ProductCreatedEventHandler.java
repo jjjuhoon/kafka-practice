@@ -1,5 +1,6 @@
-package com.practice.kafka_consumer_practice.config;
+package com.practice.kafka_consumer_practice.handler;
 
+import com.practice.core.ProductCreatedEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaHandler;
@@ -10,9 +11,11 @@ import org.springframework.stereotype.Component;
 @KafkaListener(topics="product-created-events-topic")
 public class ProductCreatedEventHandler {
 
-    private final Logger LOGGER= LoggerFactory.getLogger(this.getClass());
+    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+
     @KafkaHandler
     public void handle(ProductCreatedEvent productCreatedEvent) {
         LOGGER.info("Received a new event: " + productCreatedEvent.getTitle());
     }
+
 }

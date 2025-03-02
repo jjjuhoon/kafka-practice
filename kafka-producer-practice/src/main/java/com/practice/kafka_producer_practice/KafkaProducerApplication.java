@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class KafkaPracticeApplication {
+public class KafkaProducerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KafkaPracticeApplication.class, args);
+		SpringApplication.run(KafkaProducerApplication.class, args);
 	}
 
 }
